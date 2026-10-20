@@ -1,0 +1,32 @@
+import assert from 'node:assert/strict';
+import {handleSorting,rosterName,rosterKey,resolveHouse} from '../server/sorting';
+import {handlePortfolio,googleReceipt} from '../server/portfolioGateway';
+import {ROSTER_ASSIGNMENTS} from '../server/rosterSnapshot';
+assert.equal(Object.keys(ROSTER_ASSIGNMENTS).length,38);
+assert.ok(Object.keys(ROSTER_ASSIGNMENTS).every(k=>/^[a-f0-9]{64}$/.test(k)));
+assert.equal(rosterName('  테스트 (동명이인) '),'테스트');
+const key=await rosterKey('검증학생','test-salt');
+assert.equal(await resolveHouse('검증 학생',0,{[key]:3},'test-salt'),3);
+assert.equal(await resolveHouse('검증학생',3,{[key]:0},'test-salt'),0);
+for(let i=1;i<4;i++)assert.equal(await resolveHouse('명단밖',i,{},'test-salt'),i);
+for(const previous of [0,null,-1,4,1.5,'1'])for(let i=0;i<50;i++)assert.ok([1,2,3].includes(await resolveHouse('명단밖',previous,{},'test-salt')));
+const random=new Set<number>();for(let i=0;i<100;i++){const h=await resolveHouse('명단밖',null,{},'test-salt');assert.ok(h>=1&&h<4);random.add(h)}assert.equal(random.size,3);
+const sort=await handleSorting(new Request('https://event.test/api/sorting',{method:'POST',body:JSON.stringify({name:'검증',previousHouse:2})}));assert.deepEqual(await sort.json(),{house:2,revision:'2026-10-17-three-houses'});
+assert.equal((await handleSorting(new Request('https://event.test/api/sorting',{method:'POST',headers:{Origin:'https://other.test'},body:'{}'}))).status,403);
+console.log('PASS: all 38 private roster entries; known house override, unlisted excludes courage (including legacy fallback 0), three random houses, stable allowed fallback and origin guard');
+const id='d'.repeat(64);let saves=0;const ids=new Set();let failResponse=false;
+const google=(async(url:any,options:any)=>{
+ if(options.method==='POST'){const body=JSON.parse(options.body);assert.equal(options.redirect,'manual');assert.equal(body.requestId,id);assert.ok(!('endpoint' in body));if(!ids.has(body.requestId)){ids.add(body.requestId);saves++}if(failResponse)throw Error('lost response');return new Response(null,{status:302,headers:{Location:'https://script.googleusercontent.com/unused'}})}
+ const u=new URL(url);const callback=u.searchParams.get('callback');return new Response(callback+'('+JSON.stringify({requestId:id,state:ids.has(id)?'saved':'unknown',version:3})+');');
+}) as typeof fetch;
+const req=(body:unknown,headers={})=>new Request('https://event.test/api/portfolio',{method:'POST',headers,body:JSON.stringify(body)});
+assert.equal((await googleReceipt(id,google)).state,'unknown');
+const body={v:1,requestId:id,fileName:'검증초등학교_3학년_1반_연결검증.pdf',mimeType:'application/pdf',base64:Buffer.from('%PDF-1.4\n%%EOF').toString('base64')};
+failResponse=true;assert.equal(((await (await handlePortfolio(req(body),google)).json()) as any).state,'pending');assert.equal(((await (await handlePortfolio(req({action:'status',requestId:id}),google)).json()) as any).state,'saved');
+assert.equal(((await (await handlePortfolio(req(body),google)).json()) as any).state,'pending');assert.equal(saves,1);
+assert.equal((await handlePortfolio(req({...body,base64:'bad'}),google)).status,400);
+assert.equal((await handlePortfolio(req(body,{Origin:'https://other.test'}),google)).status,403);
+assert.equal((await handlePortfolio(req({action:'status',requestId:'bad'}),google)).status,400);
+const malformed=(async()=>new Response('arbitrary javascript')) as typeof fetch;
+assert.equal((await handlePortfolio(req({action:'status',requestId:id}),malformed)).status,502);
+console.log('PASS: same-origin PDF relay validates requests, survives lost POST response, reads matching receipt, deduplicates and rejects malformed Google output');

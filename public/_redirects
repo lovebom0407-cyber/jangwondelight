@@ -1,0 +1,4 @@
+/api/sorting /.netlify/functions/sorting 200!
+/api/portfolio /.netlify/functions/portfolio 200!
+/api/* /api-not-found.json 404!
+/* /index.html 200

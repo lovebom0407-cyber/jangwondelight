@@ -1,0 +1,299 @@
+{
+  "source": "https://raw.githubusercontent.com/Stellarium/stellarium/dc5679c9723685585196c4d6ecd7ffd33da59ecd/skycultures/modern_iau/index.json",
+  "license": "CC BY-SA 4.0",
+  "constellations": [
+    {
+      "id": "CON modern_iau Cyg",
+      "lines": [
+        [
+          102098,
+          100453,
+          102488,
+          100453,
+          95947,
+          100453,
+          97165,
+          95853,
+          94779,
+          95853,
+          99848,
+          102098,
+          103413,
+          104732,
+          102488
+        ]
+      ],
+      "common_name": {
+        "english": "Swan",
+        "native": "Cygnus",
+        "context": "IAU constellation name"
+      }
+    },
+    {
+      "id": "CON modern_iau Lyr",
+      "lines": [
+        [
+          91262,
+          91919,
+          91971,
+          91262,
+          91971,
+          92791,
+          93194,
+          92420,
+          91971
+        ]
+      ],
+      "common_name": {
+        "english": "Lyre",
+        "native": "Lyra",
+        "context": "IAU constellation name"
+      }
+    },
+    {
+      "id": "CON modern_iau Aql",
+      "lines": [
+        [
+          98036,
+          97649,
+          97278,
+          95501,
+          93805,
+          95501,
+          93747,
+          95501,
+          97804,
+          99473
+        ],
+        [
+          93244,
+          93747
+        ],
+        [
+          93805,
+          93429
+        ],
+        [
+          99473,
+          96468,
+          93805,
+          93747
+        ]
+      ],
+      "common_name": {
+        "english": "Eagle",
+        "native": "Aquila",
+        "context": "IAU constellation name"
+      }
+    },
+    {
+      "id": "CON modern_iau Peg",
+      "lines": [
+        [
+          109410,
+          112158,
+          113881,
+          112748,
+          112440,
+          109176,
+          107354
+        ],
+        [
+          677,
+          113881,
+          113963,
+          1067,
+          677
+        ],
+        [
+          107315,
+          109427,
+          112029,
+          113963
+        ]
+      ],
+      "common_name": {
+        "english": "Winged Horse",
+        "native": "Pegasus",
+        "context": "IAU constellation name"
+      }
+    },
+    {
+      "id": "CON modern_iau And",
+      "lines": [
+        [
+          677,
+          3092,
+          5447,
+          9640
+        ],
+        [
+          113726,
+          116631,
+          116805,
+          116584
+        ],
+        [
+          116631,
+          2912,
+          3092
+        ],
+        [
+          2912,
+          5447,
+          4436,
+          3881,
+          5434,
+          7607
+        ],
+        [
+          3092,
+          3031,
+          3693,
+          4463
+        ]
+      ],
+      "common_name": {
+        "native": "Andromeda",
+        "english": "Andromeda",
+        "byname": "Chained Maiden",
+        "context": "IAU constellation name"
+      }
+    },
+    {
+      "id": "CON modern_iau Aqr",
+      "lines": [
+        [
+          102618,
+          106278,
+          109074,
+          110395,
+          110960,
+          111497,
+          110960,
+          110672,
+          109074
+        ],
+        [
+          109139,
+          106278,
+          109074,
+          110003,
+          112961,
+          114724,
+          115033,
+          115438,
+          115033,
+          114341,
+          115033,
+          113136,
+          112716,
+          112961
+        ]
+      ],
+      "common_name": {
+        "english": "Water Bearer",
+        "native": "Aquarius",
+        "context": "IAU constellation name"
+      }
+    },
+    {
+      "id": "CON modern_iau Psc",
+      "lines": [
+        [
+          5742,
+          6193,
+          5586,
+          5742,
+          7097,
+          8198,
+          9487,
+          7884,
+          4906,
+          3786,
+          118268,
+          116771,
+          115830,
+          114971,
+          115738,
+          116928,
+          116771
+        ]
+      ],
+      "common_name": {
+        "english": "Fishes",
+        "native": "Pisces",
+        "context": "IAU constellation name"
+      }
+    },
+    {
+      "id": "CON modern_iau PsA",
+      "lines": [
+        [
+          113368,
+          113246,
+          112948,
+          111188,
+          109285,
+          107380,
+          107608,
+          109285,
+          111954,
+          113368
+        ]
+      ],
+      "common_name": {
+        "english": "Southern Fish",
+        "native": "Piscis Austrinus",
+        "context": "IAU constellation name"
+      }
+    },
+    {
+      "id": "CON modern_iau Cas",
+      "lines": [
+        [
+          746,
+          3179,
+          4427,
+          6686,
+          8886
+        ]
+      ],
+      "common_name": {
+        "native": "Cassiopeia",
+        "english": "Cassiopeia",
+        "byname": "Seated Queen",
+        "context": "IAU constellation name"
+      }
+    },
+    {
+      "id": "CON modern_iau Cep",
+      "lines": [
+        [
+          102422,
+          105199,
+          106032,
+          112724,
+          106032,
+          116727,
+          112724,
+          110991,
+          109492,
+          109857,
+          107259,
+          105199
+        ],
+        [
+          101093,
+          102422
+        ]
+      ],
+      "common_name": {
+        "english": "Cepheus",
+        "byname": "King",
+        "native": "Cepheus",
+        "context": "IAU constellation name"
+      }
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+#
+#   VizieR Astronomical Server vizier.cds.unistra.fr
+#    Date: 2026-10-16T14:55:31 [V7.6.1]
+#   In case of problem, please report to:	cds-question@unistra.fr
+#
+#
+#Coosys	J2000:	eq_FK5 J2000
+#INFO	service_protocol=ASU	  IVOID of the protocol through which the data was retrieved
+#INFO	request_date=2026-10-16T14:55:31	  Query execution date
+#INFO	request=https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=V%2F50%2Fcatalog&HD=358%2C432%2C886%2C3369%2C3546%2C3627%2C3712%2C4502%2C4656%2C4727%2C5394%2C5448%2C5516%2C6186%2C6811%2C6860%2C7106%2C7318%2C7964%2C8538%2C9270%2C9927%2C10380%2C10761%2C11415%2C12446%2C12533%2C172167%2C173582%2C173648%2C174638%2C175588%2C176437%2C176411%2C176678%2C177724%2C177756%2C181276%2C182640%2C184006%2C183912%2C184930%2C186882%2C186791%2C187642%2C187929%2C188512%2C191692%2C192909%2C194093%2C195725%2C197345%2C198149%2C197989%2C198001%2C199629%2C202109%2C203280%2C205021%2C204867%2C206936%2C206778%2C206901%2C206742%2C207155%2C209750%2C209819%2C210027%2C210049%2C210459%2C210418%2C210745%2C211336%2C211391%2C212061%2C212571%2C213051%2C213306%2C213398%2C213998%2C214748%2C214923%2C215182%2C215665%2C216032%2C216228%2C216131%2C216336%2C216386%2C216627%2C216763%2C216956%2C217675%2C217906%2C218045%2C218594%2C219215%2C219615%2C219688%2C220321%2C220825%2C220954%2C222107%2C222173%2C222404%2C222368%2C222439%2C222603%2C224617&-out=HR%2CHD%2CName&-out.max=200	  Full request URL
+#INFO	contact=cds-question@unistra.fr	  Email or URL to contact publisher
+#INFO	server_software=VizieR/7.6.1	  Software version
+#INFO	publisher=CDS	  Data centre that produced the VOTable
+
+#RESOURCE=yCat_5050
+#Name: V/50
+#Title: Bright Star Catalogue, 5th Revised Ed. (Hoffleit+, 1991)
+#INFO	ivoid=ivo://cds.vizier/v/50	    IVOID of underlying data collection
+#INFO	data_ivoid=ivo://cds.vizier/v/50	    IVOID of underlying data collection
+#INFO	creator=Hoffleit D.	    First author or institution
+#INFO	reference_url=https://cdsarc.cds.unistra.fr/viz-bin/cat/V/50	    Dataset landing page
+#INFO	publication_date=1997-12-09	    Date of first publication in the data centre
+#INFO	rights_uri=https://cds.unistra.fr/vizier-org/licences_vizier.html	    Licence URI
+#Coosys	J2000_2000.000:	eq_FK5 J2000
+#Table	V_50_catalog:
+#Name: V/50/catalog
+#Title: The main part of the Catalogue
+#Column	HR	(I4)	[1/9110]+ Harvard Revised Number = Bright Star Number	[ucd=meta.id;meta.main]
+#Column	HD	(I6)	[1/225300]? Henry Draper Catalog Number	[ucd=meta.id]
+#Column	Name	(a10)	Name, generally Bayer and/or Flamsteed name	[ucd=meta.id]
+HR	HD	Name
+ 	 	
+----	------	----------
+  15	   358	 21Alp And
+  21	   432	 11Bet Cas
+  39	   886	 88Gam Peg
+ 154	  3369	 29Pi  And
+ 163	  3546	 30Eps And
+ 165	  3627	 31Del And
+ 168	  3712	 18Alp Cas
+ 215	  4502	 34Zet And
+ 224	  4656	 63Del Psc
+ 226	  4727	 35Nu  And
+ 264	  5394	 27Gam Cas
+ 269	  5448	 37Mu  And
+ 271	  5516	 38Eta And
+ 294	  6186	 71Eps Psc
+ 335	  6811	 42Phi And
+ 337	  6860	 43Bet And
+ 352	  7106	 83Tau Psc
+ 360	  7318	 85Phi Psc
+ 383	  7964	 90Ups Psc
+ 403	  8538	 37Del Cas
+ 437	  9270	 99Eta Psc
+ 464	  9927	 51    And
+ 489	 10380	106Nu  Psc
+ 510	 10761	110Omi Psc
+ 542	 11415	 45Eps Cas
+ 595	 12446	113Alp Psc
+ 603	 12533	 57Gam1And
+7001	172167	  3Alp Lyr
+7051	173582	  4Eps1Lyr
+7056	173648	  6Zet1Lyr
+7106	174638	 10Bet Lyr
+7139	175588	 12Del2Lyr
+7176	176411	 13Eps Aql
+7178	176437	 14Gam Lyr
+7193	176678	 12    Aql
+7235	177724	 17Zet Aql
+7236	177756	 16Lam Aql
+7328	181276	  1Kap Cyg
+7377	182640	 30Del Aql
+7417	183912	  6Bet1Cyg
+7420	184006	 10Iot2Cyg
+7447	184930	 41Iot Aql
+7525	186791	 50Gam Aql
+7528	186882	 18Del Cyg
+7557	187642	 53Alp Aql
+7570	187929	 55Eta Aql
+7602	188512	 60Bet Aql
+7710	191692	 65The Aql
+7751	192909	 32    Cyg
+7796	194093	 37Gam Cyg
+7850	195725	  2The Cep
+7924	197345	 50Alp Cyg
+7949	197989	 53Eps Cyg
+7950	198001	  2Eps Aqr
+7957	198149	  3Eta Cep
+8028	199629	 58Nu  Cyg
+8115	202109	 64Zet Cyg
+8162	203280	  5Alp Cep
+8232	204867	 22Bet Aqr
+8238	205021	  8Bet Cep
+8305	206742	  9Iot PsA
+8308	206778	  8Eps Peg
+8315	206901	 10Kap Peg
+8316	206936	   Mu  Cep
+8326	207155	 10The PsA
+8414	209750	 34Alp Aqr
+8418	209819	 33Iot Aqr
+8430	210027	 24Iot Peg
+8431	210049	 14Mu  PsA
+8450	210418	 26The Peg
+8454	210459	 29Pi 2Peg
+8465	210745	 21Zet Cep
+8494	211336	 23Eps Cep
+8499	211391	 43The Aqr
+8518	212061	 48Gam Aqr
+8539	212571	 52Pi  Aqr
+8558	213051	 55Zet1Aqr
+8571	213306	 27Del Cep
+8576	213398	 17Bet PsA
+8597	213998	 62Eta Aqr
+8628	214748	 18Eps PsA
+8634	214923	 42Zet Peg
+8650	215182	 44Eta Peg
+8667	215665	 47Lam Peg
+8679	216032	 71Tau2Aqr
+8684	216131	 48Mu  Peg
+8694	216228	 32Iot Cep
+8695	216336	 22Gam PsA
+8698	216386	 73Lam Aqr
+8709	216627	 76Del Aqr
+8720	216763	 23Del PsA
+8728	216956	 24Alp PsA
+8762	217675	  1Omi And
+8775	217906	 53Bet Peg
+8781	218045	 54Alp Peg
+8812	218594	 88    Aqr
+8834	219215	 90Phi Aqr
+8852	219615	  6Gam Psc
+8858	219688	 93Psi2Aqr
+8892	220321	 98    Aqr
+8911	220825	  8Kap Psc
+8916	220954	 10The Psc
+8961	222107	 16Lam And
+8965	222173	 17Iot And
+8969	222368	 17Iot Psc
+8974	222404	 35Gam Cep
+8976	222439	 19Kap And
+8984	222603	 18Lam Psc
+9072	224617	 28Ome Psc
+

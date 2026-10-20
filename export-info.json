@@ -1,0 +1,12 @@
+{
+  "title": "장원 별밤학교",
+  "source_version": 25,
+  "source_commit": "4687acdeed4021e20bc32c19dc69369c4b15c053",
+  "export_date_kst": "2026-10-20",
+  "target": "Netlify Vite SPA + Functions",
+  "functions": [
+    "sorting",
+    "portfolio"
+  ],
+  "pdf_upload_limit_bytes": 4194304
+}

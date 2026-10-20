@@ -1,0 +1,37 @@
+{
+  "name": "jangwon-starlight-netlify",
+  "version": "2026.10.20",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx tests/server-event.test.ts && node --import tsx tests/event-update.test.ts && node tests/event-dom.test.mjs && node --import tsx tests/netlify-package.test.ts",
+    "deploy:preview": "npx netlify-cli@latest deploy --no-build --dir=dist --functions=netlify/functions",
+    "deploy:prod": "npx netlify-cli@latest deploy --no-build --dir=dist --functions=netlify/functions --prod"
+  },
+  "dependencies": {
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "html-to-image": "1.11.13",
+    "jspdf": "4.2.1",
+    "jsqr": "1.4.0",
+    "lucide-react": "1.58.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.3.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "tailwindcss": "4.3.3",
+    "typescript": "5.9.3",
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "tsx": "4.23.15",
+    "jsdom": "26.1.0",
+    "esbuild": "0.28.2"
+  }
+}
